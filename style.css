@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 95%;
+    max-width: 420px;
+}
+
+/* Glass Card */
+.card {
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Input */
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.input-group button {
+    padding: 10px 15px;
+    border: none;
+    background: #00ffcc;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-group button:hover {
+    transform: scale(1.1);
+}
+
+/* Tasks */
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover animation */
+li:hover {
+    transform: translateY(-3px);
+}
+
+/* Completed */
+li.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Buttons */
+.actions i {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actions i:hover {
+    color: #00ffcc;
+}
+
+/* Filters */
+.filters button {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.3);
+    color: white;
+}
+
+/* Stats */
+.stats {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Dark Mode */
+.dark {
+    background: #0f172a;
+}
+
+.dark .card {
+    background: rgba(0,0,0,0.6);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+}
